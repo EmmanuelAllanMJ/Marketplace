@@ -53,3 +53,11 @@ Rendering basic html page
         ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) </code>
 
 ## Step 4 - Adding detailed items
+* Adding custom urls for each apps
+* Adding links like ```href="{% url 'core:contact' %}"```
+
+## Step 5 - Sign up form
+* Creating ```/core/forms.py``` to handle sigup using userCreation form and user model
+* Register this route in ```/core/views.py``` get and post routes, and update ```/core/urls.py```
+* Add ```template/core/signup.html```
+
