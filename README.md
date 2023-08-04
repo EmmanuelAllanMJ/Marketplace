@@ -24,3 +24,30 @@ Rendering basic html page
 * Under ```/core/templates/core``` we will create all our html page
 * In ```/puddle/urls.py``` we reserve these routes which we defined in views.py
 
+## Step 3 - Item app, basic migration
+* Create new app ```python manage.py startapp item```
+* Creating a simple db model
+    * In ```/item/models.py``` add the db model
+    * Then ```python manage.py makemigrations```
+    * Then to implement the migration ```python manage.py migrate```
+* Admin dashboard 
+    * Create a super user ```python manage.py createsuperuser```
+    * To show db table in admin 
+        * In ```item/admin.py``` import model and add ```admin.site.register(Category)```
+        * Add ```meta``` class and ```__str__``` to override default properties
+* Displaying items
+    * In ```core/views.py``` import items and return to the html
+    * For displaying image
+        * Add in settings.py ``` MEDIA_URL = 'media/';
+                MEDIA_ROOT = BASE_DIR / 'media'``` 
+        * In ```puddle/urls.py``` add 
+        <br>
+       <code> from django.conf import settings ;from django.conf.urls.static import static </code>
+       <br>
+       <br>
+
+            <code>  urlpatterns = [
+            path('', index, name='index'),
+            path('contact/', contact, name='contact'),
+            path('admin/', admin.site.urls),
+        ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) </code>
