@@ -51,3 +51,5 @@ Rendering basic html page
             path('contact/', contact, name='contact'),
             path('admin/', admin.site.urls),
         ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) </code>
+
+## Step 4 - Adding detailed items
