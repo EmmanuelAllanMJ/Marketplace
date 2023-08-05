@@ -61,3 +61,8 @@ Rendering basic html page
 * Register this route in ```/core/views.py``` get and post routes, and update ```/core/urls.py```
 * Add ```template/core/signup.html```
 
+## Step 6 - Login form
+* Setting up login functionalities in ```/core/forms.py```
+* Register login in ```/core/urls.py```
+* Add ```/core/templates/core/login.html``` similar to signup.html
+* Give default login redirections, logout redirection and login url in ```puddle/settings.py``` 
