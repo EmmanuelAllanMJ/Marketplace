@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404 , redirect
 from item.models import Item
+from django.contrib.auth.decorators import login_required 
+from .forms import NewItemForm
 
 # Create your views here.
 def details(request, pk):
@@ -9,3 +11,19 @@ def details(request, pk):
         'item': item,
         'related_items': related_items,
     })
+
+@login_required
+def new(request):
+    if request.method == 'POST':
+        form = NewItemForm(request.POST, request.FILES)
+        if form.is_valid():
+            # commit=False means don't save to database yet as we want to add the user first
+            item = form.save(commit=False) 
+            item.created_by = request.user
+            item.save()
+            return redirect('item:details', pk=item.pk)
+    else:
+        form = NewItemForm()
+    return render(request, 'item/form.html', {
+        'form': form,
+        })
