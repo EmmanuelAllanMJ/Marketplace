@@ -66,3 +66,14 @@ Rendering basic html page
 * Register login in ```/core/urls.py```
 * Add ```/core/templates/core/login.html``` similar to signup.html
 * Give default login redirections, logout redirection and login url in ```puddle/settings.py``` 
+
+## Step 7 - Adding new items
+* Setting entering new items using forms ```/item/forms.py```
+* Register this in ```/item/urls.py```
+* Add post request handling in ```/item/views.py```
+* Add ```templates/item/form.html```     
+
+## Step 8 - Creating a dashboard
+* Create new app ```python3 manage.py startapp dashboard```, then regsister this in settings.py
+* Create index function in ```dashboard/views.py``` and register this in ```dashboard/urls.py```
+* Create ```templates/dashboard/index.html``` 
