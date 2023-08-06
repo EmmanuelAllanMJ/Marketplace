@@ -81,3 +81,6 @@ Rendering basic html page
 ## Step 9 - Deleting items
 * Modify ```item/views.py``` and ```templates/item/details.html```
 
+## Step 10 - Editing items
+* Modify ```item/views.py``` and ```templates/item/details.html```
+

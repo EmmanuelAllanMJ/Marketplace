@@ -8,4 +8,5 @@ urlpatterns = [
     path('<int:pk>/', details, name='details'),
     path('new/', new, name='new'),
     path('delete/<int:pk>/', delete, name='delete'),
+    path('edit/<int:pk>/', new, name='edit'),
 ]
