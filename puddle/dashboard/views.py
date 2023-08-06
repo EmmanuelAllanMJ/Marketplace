@@ -9,3 +9,4 @@ def index(request):
     items = Item.objects.filter(created_by=request.user)
     print(items[0])
     return render(request, 'dashboard/index.html', {'items': items})
+

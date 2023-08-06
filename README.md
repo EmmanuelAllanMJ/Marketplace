@@ -77,3 +77,7 @@ Rendering basic html page
 * Create new app ```python3 manage.py startapp dashboard```, then regsister this in settings.py
 * Create index function in ```dashboard/views.py``` and register this in ```dashboard/urls.py```
 * Create ```templates/dashboard/index.html``` 
+
+## Step 9 - Deleting items
+* Modify ```item/views.py``` and ```templates/item/details.html```
+
