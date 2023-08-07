@@ -84,3 +84,5 @@ Rendering basic html page
 ## Step 10 - Editing items
 * Modify ```item/views.py``` and ```templates/item/details.html```
 
+## Step 11 - Search functionality
+* Add new function in ```item/views.py``` then update in ```template/item/items.html```, ```urls.py```
