@@ -43,8 +43,8 @@ def new(request):
             item.created_by = request.user
             item.save()
             return redirect('item:details', pk=item.pk)
-    else:
-        form = NewItemForm()
+    
+    form = NewItemForm()
     return render(request, 'item/form.html', {
         'form': form,
         "title" : "New Item"
@@ -57,7 +57,7 @@ def delete(request, pk):
     return redirect('dashboard:index')
 
 @login_required
-def new(request, pk):
+def newItem(request, pk):
     item = get_object_or_404(Item, pk=pk, created_by=request.user)
     if request.method == 'POST':
         form = EditItemForm(request.POST, request.FILES, instance=item)
