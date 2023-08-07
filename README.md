@@ -86,3 +86,7 @@ Rendering basic html page
 
 ## Step 11 - Search functionality
 * Add new function in ```item/views.py``` then update in ```template/item/items.html```, ```urls.py```
+
+## Deployment
+* Change in ```settings.py``` and check the deployment using ```python manage.py check --deploy```
+* Then mmigrate the db
