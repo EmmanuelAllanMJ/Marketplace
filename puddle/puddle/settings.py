@@ -38,6 +38,7 @@ SESSION_COOKIE_SECURE = True
 
 # security.W008
 SECURE_SSL_REDIRECT = False
+CSRF_TRUSTED_ORIGINS = ['https://puddle.azurewebsites.net', 'https://localhost:8000']
 
 # security.W004
 SECURE_HSTS_SECONDS = 31536000 # One year in seconds
