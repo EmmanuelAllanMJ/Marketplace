@@ -94,6 +94,9 @@ Rendering basic html page
 * Add urls
 * Update template accordingly
 
-## Deployment
+## Deployment using docker
 * Change in ```settings.py``` and check the deployment using ```python manage.py check --deploy```
-* Then mmigrate the db
+* Then migrate the db
+* ```docker login```
+* ```docker build -t username/appname:latest .```
+* ```docker push username/appname:latest```
